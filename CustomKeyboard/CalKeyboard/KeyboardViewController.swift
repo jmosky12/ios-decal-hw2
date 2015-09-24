@@ -10,41 +10,85 @@ import UIKit
 
 class KeyboardViewController: UIInputViewController {
 
-    @IBOutlet var nextKeyboardButton: UIButton!
+    var coolKidKeyboardView: UIView!
+    @IBOutlet var spaceButton: UIButton!
+    @IBOutlet var righteousButton: UIButton!
+    @IBOutlet var wickedButton: UIButton!
+    @IBOutlet var groovyButton: UIButton!
+    @IBOutlet var gnarlyButton: UIButton!
+    @IBOutlet var sickButton: UIButton!
+    @IBOutlet var thatsWhackButton: UIButton!
+    @IBOutlet var bitchinButton: UIButton!
+    @IBOutlet var farOutButton: UIButton!
+    @IBOutlet var tubularButton: UIButton!
+    @IBOutlet var radicalButton: UIButton!
+    @IBOutlet var bodaciousButton: UIButton!
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var returnButton: UIButton!
+    @IBOutlet var deleteButton: UIButton!
     
-    var keyboardView: UIView!
-
+    @IBAction func buttonPressed(sender: UIButton) {
+        
+        let title = (sender.titleLabel!.text)!
+        
+        switch(title) {
+        case "Next":
+            sender.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
+        case "Return":
+            self.textDocumentProxy.insertText("\n")
+        case "Delete":
+            self.textDocumentProxy.deleteBackward()
+        case "Space":
+            self.textDocumentProxy.insertText(" ")
+        default:
+            self.textDocumentProxy.insertText(title)
+        }
+    }
+    
+    
     override func updateViewConstraints() {
         super.updateViewConstraints()
-    
-        // Add custom view sizing constraints here
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadInterface()
+        loadKeyboard()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated
     }
-
+    
     override func textWillChange(textInput: UITextInput?) {
-        // The app is about to change the document's contents. Perform any preparation here.
+        
     }
-
+    
     override func textDidChange(textInput: UITextInput?) {
-        // The app has just changed the document's contents, the document context has been updated.
+        
     }
 
-    func loadInterface() {
-        let keyboardNib = UINib(nibName: "Keyboard", bundle: nil)
-        keyboardView = keyboardNib.instantiateWithOwner(self, options: nil)[0] as! UIView
-        keyboardView.frame = view.frame
-        view.addSubview(keyboardView)
-        view.backgroundColor = keyboardView.backgroundColor
-        nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside) // advanceToNextInputMode is already defined in template
+    
+    func loadKeyboard() {
+        let keyBoardNib = UINib(nibName: "Keyboard", bundle: nil)
+        coolKidKeyboardView = keyBoardNib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        view.addSubview(coolKidKeyboardView)
+        coolKidKeyboardView.frame = view.frame
+        radicalButton.layer.cornerRadius = 7.0
+        spaceButton.layer.cornerRadius = 7.0
+        righteousButton.layer.cornerRadius = 7.0
+        sickButton.layer.cornerRadius = 7.0
+        gnarlyButton.layer.cornerRadius = 7.0
+        farOutButton.layer.cornerRadius = 7.0
+        thatsWhackButton.layer.cornerRadius = 7.0
+        returnButton.layer.cornerRadius = 7.0
+        nextButton.layer.cornerRadius = 7.0
+        deleteButton.layer.cornerRadius = 7.0
+        wickedButton.layer.cornerRadius = 7.0
+        groovyButton.layer.cornerRadius = 7.0
+        bitchinButton.layer.cornerRadius = 7.0
+        tubularButton.layer.cornerRadius = 7.0
+        bodaciousButton.layer.cornerRadius = 7.0
+
     }
 
 

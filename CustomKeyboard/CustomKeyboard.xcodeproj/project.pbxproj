@@ -13,8 +13,8 @@
 		3AAA639F1BA9263900E3822E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA639D1BA9263900E3822E /* Main.storyboard */; };
 		3AAA63A11BA9263900E3822E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA63A01BA9263900E3822E /* Assets.xcassets */; };
 		3AAA63A41BA9263900E3822E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA63A21BA9263900E3822E /* LaunchScreen.storyboard */; };
-		3AAA63B31BA9283500E3822E /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA63B21BA9283500E3822E /* KeyboardViewController.swift */; };
 		3AAA63B71BA9283500E3822E /* CalKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3AAA63B01BA9283500E3822E /* CalKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DF83F03C1BB2523D000A68C3 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA63B21BA9283500E3822E /* KeyboardViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,9 +164,11 @@
 				TargetAttributes = {
 					3AAA63951BA9263900E3822E = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 8Q39HTS948;
 					};
 					3AAA63AF1BA9283500E3822E = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 8Q39HTS948;
 					};
 				};
 			};
@@ -224,7 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AAA63B31BA9283500E3822E /* KeyboardViewController.swift in Sources */,
+				DF83F03C1BB2523D000A68C3 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,11 +345,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = CustomKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cs198-1.CustomKeyboard";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JakeKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -355,21 +360,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = CustomKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cs198-1.CustomKeyboard";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JakeKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 		3AAA63B91BA9283500E3822E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CalKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cs198-1.CustomKeyboard.CalKeyboard";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JakeKeyboard.derp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -377,10 +388,13 @@
 		3AAA63BA1BA9283500E3822E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CalKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cs198-1.CustomKeyboard.CalKeyboard";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JakeKeyboard.derp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
